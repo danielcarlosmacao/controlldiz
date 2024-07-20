@@ -18,11 +18,15 @@ class DevolutionController extends Controller
     public function launch(){
 
         $dizimista = tithe::where('status','ativo')->where('year',date('y'))->with('registers','devolutions','devolutions2','devolutions3','devolutions4','devolutions5','devolutions6','devolutions7','devolutions8','devolutions9','devolutions10','devolutions11','devolutions12')->get();
-        #dd($dizimista);
- 
+
          return view('admin.devolucao.launch',['dizimista'=>$dizimista]);
+
+
+         
      }
 
+     
+     
      public function create($id){
 
         

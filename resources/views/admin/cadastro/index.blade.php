@@ -4,7 +4,10 @@
 
 @section('content')
 
-<div class="center" style="position:relative; top:50px;"><h3>Cadastros</h3></div>
+<div class="center" style="position:relative; top:50px;"><h3>Cadastros &nbsp
+  <a href="/admin/dizimista/createall" onclick="return confirm('Deseja realmente prosseguir?')" class="btn deep blue"><i class="material-icons">add</i></a> 
+  <!--<button onclick="Confirm()"><i class="material-icons">add</i></button> -->
+</h3></div>
 <div class="  main">
     <div class="list">
         <table class="table table-bordered">
@@ -38,5 +41,15 @@
     </div>
 </div>
 
+<script>
+  function Confirm() {
+    var txt;
+    if (confirm("Press a button!")) {
+      
+    } else {
+      console.log("cancell");
+    }
+      }
+  </script>
 
 @endsection

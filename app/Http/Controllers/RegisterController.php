@@ -54,6 +54,7 @@ public function index(){
     
     
      public function edit($id){
+        
         $cadastro = register::where('id',$id)->get();
 
         return view('admin.cadastro.edit',['cadastro' =>$cadastro]);

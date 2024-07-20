@@ -51,12 +51,16 @@ class TitheController extends Controller
         return view('admin.dizimista.list', ['dizimistas' => $dizimistas]);
     }
 
-    public function createall($id){
-        
+    public function createall(){
+
         $cadastroAtivo = register::where('status','ativo')->get();
        
+        foreach($cadastroAtivo as $item){
         
-        #echo($cadastroAtivo);
+            $this->create($item->id);
+    
+    }
+    return Redirect('/admin/cadastro/list');
 
     }
 

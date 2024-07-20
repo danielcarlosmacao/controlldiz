@@ -34,7 +34,7 @@ Route::get('/admin/cadastro/edit/{id}', [RegisterController::class, 'edit'])->mi
 Route::post('/admin/cadastro/create', [RegisterController::class, 'create'])->middleware('auth');
 
 Route::get('/admin/dizimista/create/{id}', [TitheController::class, 'create'])->middleware('auth');
-Route::get('/admin/dizimista/createall/{id}', [TitheController::class, 'createall'])->middleware('auth');
+Route::get('/admin/dizimista/createall', [TitheController::class, 'createall'])->middleware('auth');
 Route::get('/admin/dizimista/list', [TitheController::class, 'list'])->middleware('auth');
 
 
